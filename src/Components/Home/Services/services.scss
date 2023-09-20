@@ -1,0 +1,143 @@
+
+
+#services{
+    width: 100%;
+    font-size: 10px;
+    min-height: 35em;
+    padding: 10em;
+    text-align: center;
+
+    h2{
+        font-weight: 400;
+    }
+    h6{
+        font-size: 1.4em;
+        color: var(--fourth);
+        margin: 2em 0;
+        padding: 0 18em;
+        line-height: 1.7;
+    }
+
+
+    .servicebox{
+
+        width: 100%;
+        height: 20em;
+        margin: 8em 0;
+
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        // align-items: center;
+
+        .content{
+            width: 27em;
+            height: 25em;
+            box-shadow: 0px 0px 2em 0.5em rgb(246, 179, 179);
+            background: rgba(204, 245, 245, 0.712);
+            padding: 4em;
+            transition: all 0.4s ease;
+            overflow: hidden;
+            border-radius: 1em;
+
+            h5{
+                font-size: 7em;
+                margin: 0;
+                color : #ffaf02;
+                transition: all 0.4s ease;
+
+            }
+            h3{
+                font-size: 2.8em;
+                // display: none;
+
+            }
+            p{
+                transform: translateY(100%);
+                font-size: 1.25em;
+                color: var(--fourth);
+                opacity: 0;
+                font-weight: bolder;
+                transition: all 1s ease;
+            }
+
+        }
+
+        .content:hover{
+            transform: scale(1.1);
+            background: #ffaf02;
+            box-shadow: none;
+
+            h3{
+                display: none;
+                
+            }
+            p{
+                transform: translateY(0);
+                opacity: 1;
+                color: var(--first);
+
+            }
+            h5{
+                color: var(--second);
+                
+            }
+        }
+    }
+}
+
+
+
+@media (max-width : 1024px) {
+
+    #services{
+        font-size: 10px;
+        padding: 8em 5em;
+        height: 120em;
+
+        h6{
+            font-size: 2em;
+            padding: 0 2em;
+            margin-top: 1em;
+        }
+
+        .servicebox{
+            justify-content: space-evenly;
+            gap: 8em;
+
+            .content{
+                height: 30em;
+
+                p{
+                    font-size: 1.45em;
+                }
+            }
+        }
+    }
+    
+}
+
+
+@media (max-width : 600px) {
+
+    #services{
+        font-size: 6px;
+
+        padding: 10em 3em;
+
+        height: 210em;
+
+        .servicebox .content{
+            width: 32em;
+            height: 32em;
+
+            h3{
+                font-size: 3.6em;
+            }
+            p{
+                font-size: 1.7em;
+            }
+        }
+    }
+    
+}
